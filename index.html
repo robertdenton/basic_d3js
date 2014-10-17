@@ -57,7 +57,7 @@
 		//start drawing graph
 		var chart = d3.select(".chart")
 		chart.selectAll("div")
-			//bind data
+			// http://bost.ocks.org/mike/join/
 			.data(data)
 			.enter().append("div")
 			.style("width", function(d) { 
