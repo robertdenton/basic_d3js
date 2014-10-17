@@ -53,9 +53,6 @@
 		var x = d3.scale.linear()
 			.domain([0, function(d){
 				return d3.max(d.Total)
-			}])
-			.range([0, function(d){
-				return d3.max(d.Total)
 			}]);
 		//start drawing graph
 		var chart = d3.select(".chart")
