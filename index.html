@@ -10,13 +10,13 @@
 		width:100%;
 	}
 	.chart div {
-	  font: 10px sans-serif;
-	  background-color: #2c3e50;
-	  text-align: right;
-	  padding: 3px;
-	  margin: 3px;
-	  color: white;
-	  font-size:1.8em;
+		font: 10px sans-serif;
+		background-color: #2c3e50;
+		text-align: right;
+		padding: 3px;
+		margin: 3px;
+		color: white;
+		font-size:1.8em;
 	}
 	.chart div:hover{
 		background-color: #3498db;
@@ -51,45 +51,45 @@
 		data=json;
 		//set the scales to match our data
 		var x = d3.scale.linear()
-	    .domain([0, function(d){
-	    	return d3.max(d.Total)
-	    }])
-	    .range([0, function(d){
-	    	return d3.max(d.Total)
-	    }]);
-	    //start drawing graph
-	    var chart = d3.select(".chart")
+			.domain([0, function(d){
+				return d3.max(d.Total)
+			}])
+			.range([0, function(d){
+				return d3.max(d.Total)
+			}]);
+		//start drawing graph
+		var chart = d3.select(".chart")
 		chart.selectAll("div")
 			//bind data
-		    .data(data)
-		  	.enter().append("div")
-		    .style("width", function(d) { 
-		    	//responsive bars to match width of box
-		    	return ((d.Complete/d.Total)*100) + "%";
-		    })
-		    .text(function(d) {
-		    	//write out text in box
-		    	return d.abtest + ": " + d.Complete + "/" + d.Total;
-		    })
-		    //style the text
-		   	//.style("height", "23px")
-		   	//on hover return the percent of clicks		 	
-		   	.on("mouseover", function(d){
-		   		d3.select(this)
-		   			.text(function(d){
-			   		  	//be sure to round it so there aren't crazy fractions
-			   		  	var percent = d.Complete/d.Total;
-			   		  	round = Math.round(percent*100);
-			   		  	return d.abtest + ": " + round + "%";
-			   		  })
+			.data(data)
+			.enter().append("div")
+			.style("width", function(d) { 
+				//responsive bars to match width of box
+				return ((d.Complete/d.Total)*100) + "%";
 			})
-		   	.on("mouseout", function(d){
-		   		//on not hover return to original text
-		   		d3.select(this)
-		   			.text(function(d){
-		    			return d.abtest + ": " + d.Complete + "/" + d.Total;
-			   		})
-		   	})
+			.text(function(d) {
+				//write out text in box
+				return d.abtest + ": " + d.Complete + "/" + d.Total;
+			})
+			//style the text
+			//.style("height", "23px")
+			//on hover return the percent of clicks			
+			.on("mouseover", function(d){
+				d3.select(this)
+					.text(function(d){
+							//be sure to round it so there aren't crazy fractions
+							var percent = d.Complete/d.Total;
+							round = Math.round(percent*100);
+							return d.abtest + ": " + round + "%";
+						})
+			})
+			.on("mouseout", function(d){
+				//on not hover return to original text
+				d3.select(this)
+					.text(function(d){
+					return d.abtest + ": " + d.Complete + "/" + d.Total;
+					})
+			})
 	});// end JSON function
 	</script>
 </body>

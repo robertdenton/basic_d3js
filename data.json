@@ -1,12 +1,12 @@
 [
 	{
 		"abtest":"Text 1",
-		"Complete": "200",
-		"Total": "300"
+		"Complete": 137,
+		"Total": 400
 	},
 	{
 		"abtest":"Text 2",
-		"Complete": "250",
-		"Total": "500"
+		"Complete": 341,
+		"Total": 500
 	}
 ]
