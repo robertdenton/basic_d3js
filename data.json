@@ -1,12 +1,44 @@
 [
 	{
-		"abtest":"Text 1",
-		"Complete": 137,
-		"Total": 400
+		"contest": "US Senate",
+		"total": 400,
+		"options": [
+			{
+				"option":"Yes",
+				"votes": 20,
+				"percent": 50
+			},
+			{
+				"option":"No",
+				"votes": 80,
+				"percent": 30
+			},
+			{
+				"option":"Yes",
+				"votes": 100,
+				"percent":25
+			},
+			{
+				"option":"No",
+				"votes": 200,
+				"percent": 50
+			}
+		]
 	},
 	{
-		"abtest":"Text 2",
-		"Complete": 341,
-		"Total": 500
+		"contest": "US Rep 4th District",
+		"total": 500,
+		"options": [
+			{
+				"option":"Yes",
+				"votes": 200,
+				"percent": 40
+			},
+			{
+				"option":"No",
+				"votes": 100,
+				"percent": 20
+			}
+		]
 	}
 ]
